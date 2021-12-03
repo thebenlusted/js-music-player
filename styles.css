@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background: #03001e;
+  background: -webkit-linear-gradient(to bottom right, #fdeff9, #ec38bc, #7303c0, #03001e);
+  background: linear-gradient(to bottom right, #fdeff9, #ec38bc, #7303c0, #03001e);
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#player-window {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(16px);
+  padding: 20px;
+  border-radius: 20px 5px 20px 5px;
+}
+
+#music-cont {
+  position: relative;
+}
+#music-cont .img-cont {
+  width: 100%;
+  position: relative;
+}
+#music-cont .img-cont img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+#music-cont #menu-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  background: none;
+  border: 0;
+}
+#music-cont #menu-btn:focus {
+  outline: 0;
+}
+#music-cont #dropdown-content {
+  display: none;
+  flex-direction: column;
+  text-align: right;
+  background: whitesmoke;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 15px;
+}
+#music-cont #dropdown-content button {
+  background: none;
+  border: 0;
+  font-size: 26px;
+  text-align: right;
+  color: #03001e;
+  position: relative;
+  text-align: center;
+  margin-top: 8px;
+}
+#music-cont #dropdown-content button:focus {
+  outline: 0;
+}
+#music-cont #dropdown-content button:after {
+  content: "";
+  position: absolute;
+  background: #ec38bc;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: -1;
+}
+#music-cont #dropdown-content a {
+  color: #03001e;
+  text-decoration: none;
+  margin: 8px 0;
+}
+#music-cont #title {
+  font-weight: 800;
+  font-size: 26px;
+  max-width: 260px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+}
+#music-cont #artist-name {
+  font-weight: 300;
+}
+#music-cont .navigation {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.137);
+  padding: 4px;
+  border-radius: 35px;
+  margin-top: 12px;
+}
+#music-cont .navigation button {
+  margin: 10px 18px;
+  border-radius: 50%;
+  border: 0;
+  background: none;
+  color: white;
+  transition: 0.2s ease-out;
+}
+#music-cont .navigation button:focus {
+  outline: 0;
+}
+#music-cont .navigation i {
+  vertical-align: middle;
+  font-size: 26px;
+}
+#music-cont #time-stamp {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+#music-cont #progress-cont {
+  background: #fff;
+  cursor: pointer;
+  height: 6px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+#music-cont #progress-cont .progress {
+  background-color: #ff2c61;
+  height: 100%;
+  width: 0%;
+  transition: 0.1s linear;
+}
+
+footer {
+  position: absolute;
+  left: 20px;
+  padding: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+}
+footer a {
+  color: white;
+  margin: 20px 0;
+}
+footer a:first-of-type {
+  margin-top: 40px;
+}
+footer h3 {
+  font-size: 40px;
+  font-weight: 900;
+  font-family: sans-serif !important;
+  color: white;
+}
+footer i {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 580px) {
+  footer {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    padding: 8px 10px;
+  }
+  footer a {
+    margin: 0 20px;
+    display: inline-block;
+    margin-top: 12px !important;
+  }
+  footer h3 {
+    margin: 0 30px 0 8px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
